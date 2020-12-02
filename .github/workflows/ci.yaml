@@ -26,4 +26,4 @@ jobs:
 
       - uses: merijn/github-actions@master
         with:
-          ghc-path: ${{ steps.tools.ghc-path }}
+          ghc-exe: ${{ steps.tools.ghc-exe }}
