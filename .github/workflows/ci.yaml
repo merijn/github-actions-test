@@ -16,7 +16,14 @@ jobs:
         cabal: ["3.2"]
         ghc: ["8.10"]
     steps:
+      - uses: actions/checkout@v2
+
+      - id: tools
+        uses: actions/setup-haskell@v1.1
+        with:
+          ghc-version: ${{ inputs.ghc-version }}
+          cabal-version: ${{ inputs.cabal-version }}
+
       - uses: merijn/github-actions@master
         with:
-          ghc-version: ${{ matrix.ghc }}
-          cabal-version: ${{ matrix.cabal }}
+          ghc-path: ${{ steps.tools.ghc-path }}
