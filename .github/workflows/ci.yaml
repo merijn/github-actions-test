@@ -21,8 +21,8 @@ jobs:
       - id: tools
         uses: actions/setup-haskell@v1.1
         with:
-          ghc-version: ${{ inputs.ghc-version }}
-          cabal-version: ${{ inputs.cabal-version }}
+          ghc-version: ${{ matrix.ghc }}
+          cabal-version: ${{ matrix.cabal }}
 
       - uses: merijn/github-actions@master
         with:
