@@ -16,7 +16,7 @@ jobs:
         cabal: ["3.2"]
         ghc: ["8.10"]
     steps:
-      - uses: merijn/github-actions
+      - uses: merijn/github-actions@master
         with:
           ghc-version: ${{ matrix.ghc }}
           cabal-version: ${{ matrix.cabal }}
